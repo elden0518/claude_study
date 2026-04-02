@@ -51,9 +51,9 @@ client = anthropic.Anthropic()
 
 
 def main():
-    print("=" * 60)
+    print("=*" * 30)
     print("Hello Claude! —— 第一次 API 调用")
-    print("=" * 60)
+    print("=#" * 30)
 
     # ── 4. 发送第一条消息 ──────────────────────────────────────────────────────
     # messages.create() 是最核心的 API，三个必填参数说明如下：
