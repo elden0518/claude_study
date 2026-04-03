@@ -25,6 +25,7 @@ if sys.platform == "win32":
   5. 生成（LLM + Prompt）
 
   优势：不需要微调模型，直接扩展 LLM 的知识范围
+  国内用户：Embedding 模型通过 hf-mirror.com 下载，无需翻墙
 
 前置知识：已完成 07-09
 """
@@ -46,6 +47,9 @@ except ImportError:
     from langchain_community.embeddings import HuggingFaceEmbeddings
 
 load_dotenv()
+
+# 国内镜像：无法访问 huggingface.co 时自动切换到 hf-mirror.com
+os.environ.setdefault("HF_ENDPOINT", "https://hf-mirror.com")
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 SAMPLE_DOCS_DIR = os.path.join(SCRIPT_DIR, "sample_docs")

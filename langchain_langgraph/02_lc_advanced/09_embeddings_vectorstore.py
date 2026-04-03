@@ -19,7 +19,8 @@ if sys.platform == "win32":
   语义相近的文本，在向量空间中距离也近
   FAISS = Facebook AI 开源的高效向量相似度搜索库
 
-  注意：首次运行会下载 HuggingFace 模型（约 100MB），需要网络
+  注意：首次运行会下载 HuggingFace 模型（约 100MB）
+  国内用户：自动使用 hf-mirror.com 镜像，无需翻墙
 
 前置知识：已完成 08_text_splitters.py
 """
@@ -40,8 +41,12 @@ except ImportError:
 
 load_dotenv()
 
+# 国内镜像：无法访问 huggingface.co 时自动切换到 hf-mirror.com
+import os
+os.environ.setdefault("HF_ENDPOINT", "https://hf-mirror.com")
+
 # 嵌入模型：BAAI/bge-small-zh-v1.5 是专为中文优化的小型嵌入模型
-# 首次运行会自动从 HuggingFace Hub 下载（约 100MB）
+# 首次运行会自动下载（约 100MB），后续运行直接加载本地缓存
 EMBEDDING_MODEL = "BAAI/bge-small-zh-v1.5"
 
 # 演示用的中文编程知识句子
