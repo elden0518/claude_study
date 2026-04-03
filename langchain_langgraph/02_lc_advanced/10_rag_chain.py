@@ -4,6 +4,10 @@ if sys.platform == "win32":
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
     sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
 
+# 国内镜像：必须在所有 huggingface 相关库导入之前设置，否则不生效
+import os
+os.environ.setdefault("HF_ENDPOINT", "https://hf-mirror.com")
+
 """
 主题：RAG Chain —— 检索增强生成，让 AI 回答你的私有文档
 
@@ -47,9 +51,6 @@ except ImportError:
     from langchain_community.embeddings import HuggingFaceEmbeddings
 
 load_dotenv()
-
-# 国内镜像：无法访问 huggingface.co 时自动切换到 hf-mirror.com
-os.environ.setdefault("HF_ENDPOINT", "https://hf-mirror.com")
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 SAMPLE_DOCS_DIR = os.path.join(SCRIPT_DIR, "sample_docs")

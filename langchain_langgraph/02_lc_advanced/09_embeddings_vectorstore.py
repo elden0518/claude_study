@@ -4,6 +4,10 @@ if sys.platform == "win32":
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
     sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
 
+# 国内镜像：必须在所有 huggingface 相关库导入之前设置，否则不生效
+import os
+os.environ.setdefault("HF_ENDPOINT", "https://hf-mirror.com")
+
 """
 主题：Embeddings & Vector Store —— 把文本变成向量，实现语义搜索
 
@@ -25,7 +29,6 @@ if sys.platform == "win32":
 前置知识：已完成 08_text_splitters.py
 """
 
-import os
 from dotenv import load_dotenv
 from langchain_community.vectorstores import FAISS
 from langchain_anthropic import ChatAnthropic
@@ -40,10 +43,6 @@ except ImportError:
     from langchain_community.embeddings import HuggingFaceEmbeddings
 
 load_dotenv()
-
-# 国内镜像：无法访问 huggingface.co 时自动切换到 hf-mirror.com
-import os
-os.environ.setdefault("HF_ENDPOINT", "https://hf-mirror.com")
 
 # 嵌入模型：BAAI/bge-small-zh-v1.5 是专为中文优化的小型嵌入模型
 # 首次运行会自动下载（约 100MB），后续运行直接加载本地缓存
