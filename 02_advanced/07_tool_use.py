@@ -230,6 +230,8 @@ def run_agent(user_message: str) -> str:
             messages=messages
         )
 
+        print(f"  Claude 请求：{messages}")
+        print(f"  Claude 回复：{response}")
         print(f"  stop_reason = {response.stop_reason!r}")
 
         # ── 情况 A：模型完成，直接返回 ───────────────────────
@@ -269,7 +271,7 @@ def run_agent(user_message: str) -> str:
                 tool_name = block.name   # 工具名称，对应 TOOLS 中的 name 字段
                 tool_input = block.input # 工具参数，对应 input_schema 定义的字段
 
-                print(f"  → 调用工具：{tool_name}，参数：{json.dumps(tool_input, ensure_ascii=False)}")
+                print(f"  → 调用工具：{tool_name}，工具id:{tool_id}, 工具参数：{json.dumps(tool_input, ensure_ascii=False)}")
 
                 # 步骤 4：本地执行工具函数
                 result = dispatch_tool(tool_name, tool_input)
