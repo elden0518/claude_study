@@ -1,0 +1,7 @@
+LangChain是一个用于构建基于大型语言模型（LLM）应用的开源框架。
+LangChain提供了统一的接口来与不同的LLM提供商（如Anthropic、OpenAI）交互。
+LCEL（LangChain Expression Language）使用管道操作符|将组件串联成链。
+LangChain的核心组件包括：模型（Model）、提示模板（Prompt Template）、输出解析器（Output Parser）。
+RAG（检索增强生成）是LangChain的重要应用场景，通过检索相关文档来增强LLM的回答。
+LangChain支持多种向量数据库，如FAISS、Chroma、Pinecone等，用于存储和检索文档嵌入。
+Agent是LangChain中能够自主调用工具、规划步骤的智能体组件。

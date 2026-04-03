@@ -1,0 +1,8 @@
+LangGraph是基于LangChain构建的图形化工作流框架，用于构建有状态的多步骤AI应用。
+LangGraph使用有向图来描述AI工作流，支持循环、条件分支和并行执行。
+LangGraph的核心概念是StateGraph，通过TypedDict定义节点间共享的状态。
+节点（Node）是LangGraph中执行具体任务的函数，接收State并返回更新字典。
+边（Edge）定义节点之间的执行顺序，条件边（Conditional Edge）根据状态动态路由。
+LangGraph支持Human-in-the-Loop模式，可以在执行过程中暂停等待人工输入。
+Checkpoint机制允许LangGraph保存和恢复图的执行状态，支持长时间运行的工作流。
+Multi-Agent系统是LangGraph的高级应用，多个专职Agent协同完成复杂任务。
