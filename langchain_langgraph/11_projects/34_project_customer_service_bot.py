@@ -281,7 +281,7 @@ def build_customer_service_graph():
     graph.add_node("generate_answer", answer_generator_node)
     graph.add_node("format_response", response_formatter_node)
     graph.add_node("collect_feedback", feedback_collector_node)
-    graph.add_node("human_escalation", lambda s: {"messages": [AIMessage(content="已转接人工客服）]})
+    graph.add_node("human_escalation", lambda s: {"messages": [AIMessage(content="已转接人工客服")]})
     
     # 添加边
     graph.add_edge(START, "classify_intent")
@@ -289,7 +289,10 @@ def build_customer_service_graph():
     graph.add_edge("retrieve_knowledge", "check_escalation")
     
     # 条件分支
-    graph.add_conditional_edges("check_escalation", should_escalate_to_human)
+    graph.add_conditional_edges("check_escalation", should_escalate_to_human, {
+        "human_escalation": "human_escalation",
+        "generate_answer": "generate_answer"
+    })
     
     graph.add_edge("generate_answer", "format_response")
     graph.add_edge("human_escalation", "format_response")
