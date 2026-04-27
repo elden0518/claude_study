@@ -10,3 +10,21 @@ chromadb>=0.5.0
 faiss-cpu>=1.8.0
 sentence-transformers>=3.0.0
 python-dotenv>=1.0.0
+
+# 生产级依赖（新增）
+tenacity>=8.2.0              # 重试机制
+fastapi>=0.109.0             # API 服务
+uvicorn>=0.27.0              # ASGI 服务器
+pydantic>=2.5.0              # 数据验证
+redis>=5.0.1                 # 缓存
+psycopg2-binary>=2.9.9       # PostgreSQL
+
+# 评估与测试（新增）
+ragas>=0.1.0                 # RAG 评估
+pytest>=7.4.0                # 单元测试
+pytest-asyncio>=0.23.0       # 异步测试
+
+# 可选依赖
+langgraph-cli>=0.1.0         # LangGraph Studio
+langchain-cohere>=0.1.0      # Cohere Rerank
+flagembedding>=1.2.0         # BGE Reranker

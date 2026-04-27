@@ -241,10 +241,11 @@ def demo_sliding_window():
     )
 
     questions = [
-        "请记住：数字 A = 100",
-        "请记住：数字 B = 200",
+        "请记住：数字 A = 120",
+        "请记住：数字 B = 250",
         "请记住：数字 C = 300",
-        "A、B、C 分别是多少？（你还记得吗）",
+        "请记住：数字 D = 400",
+        "A、B、C、D 分别是多少？（你还记得吗）",
     ]
 
     for q in questions:
@@ -324,9 +325,9 @@ def demo_persistence():
     print("\n持久化演示完成：Claude 成功在新 session 中延续了上下文。")
 
     # 清理临时文件
-    if os.path.exists(HISTORY_FILE):
-        os.remove(HISTORY_FILE)
-        print(f"  [清理] 已删除临时文件 {HISTORY_FILE}")
+    # if os.path.exists(HISTORY_FILE):
+    #     os.remove(HISTORY_FILE)
+    #     print(f"  [清理] 已删除临时文件 {HISTORY_FILE}")
 
 
 # ============================================================
