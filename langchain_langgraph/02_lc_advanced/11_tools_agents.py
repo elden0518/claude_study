@@ -11,8 +11,8 @@ if sys.platform == "win32":
   1. 理解 Tool 的概念：AI 可以调用的函数
   2. 掌握 @tool 装饰器定义工具
   3. 理解 ReAct 推理模式（思考→行动→观察→循环）
-  4. 掌握 create_react_agent + AgentExecutor
-  5. 学会观察 Agent 的推理过程（verbose=True）
+  4. 掌握 create_agent（LangChain 1.0+ 新 API）
+  5. 学会观察 Agent 的推理过程
 
 核心概念：
   Tool = 有名字、有描述、可被 LLM 调用的 Python 函数
@@ -27,7 +27,7 @@ if sys.platform == "win32":
 import datetime
 from dotenv import load_dotenv
 from langchain_core.tools import tool
-from langchain.agents import create_react_agent, AgentExecutor
+from langchain.agents import create_agent
 from langchain_anthropic import ChatAnthropic
 from langchain_core.prompts import PromptTemplate
 
@@ -198,19 +198,12 @@ def part2_create_and_run_agent():
     prompt = get_react_prompt()
     print()
 
-    # 创建 ReAct Agent
-    # create_react_agent 把 llm + tools + prompt 组合成 Agent
-    agent = create_react_agent(llm, TOOLS, prompt)
-
-    # AgentExecutor 负责实际运行 Agent，处理工具调用循环
-    # verbose=True：打印每一步的 Thought/Action/Observation
-    # max_iterations：防止无限循环（默认 15）
-    agent_executor = AgentExecutor(
-        agent=agent,
+    # 创建 ReAct Agent（新版本方式）
+    # create_agent 使用关键字参数：model, tools, system_prompt
+    agent = create_agent(
+        model=llm,
         tools=TOOLS,
-        verbose=True,
-        max_iterations=5,
-        handle_parsing_errors=True,  # 遇到解析错误时自动重试
+        system_prompt=str(prompt),  # 将 PromptTemplate 转换为字符串
     )
 
     # 任务：需要用到 get_current_date 和 calculate 两个工具
@@ -220,22 +213,26 @@ def part2_create_and_run_agent():
     print("【Agent 推理过程（verbose=True）】")
     print("-" * 40)
 
-    result = agent_executor.invoke({"input": task})
+    # 新版 Agent 直接调用，使用 messages 格式
+    from langchain_core.messages import HumanMessage
+    result = agent.invoke({"messages": [HumanMessage(content=task)]})
 
     print("-" * 40)
     print()
     print("【最终回答】")
-    print(result["output"])
+    # 新版 Agent 返回的是包含 messages 的字典
+    if "messages" in result and result["messages"]:
+        print(result["messages"][-1].content)
     print()
 
-    return agent_executor
+    return agent
 
 
 # ============================================================
 # Part 3: 多工具组合任务
 # ============================================================
 
-def part3_multi_tool_task(agent_executor):
+def part3_multi_tool_task(agent):
     """
     观察 Agent 如何分解复杂任务并依次调用多个工具。
 
@@ -256,12 +253,14 @@ def part3_multi_tool_task(agent_executor):
     print("【Agent 推理过程】")
     print("-" * 40)
 
-    result = agent_executor.invoke({"input": task})
+    from langchain_core.messages import HumanMessage
+    result = agent.invoke({"messages": [HumanMessage(content=task)]})
 
     print("-" * 40)
     print()
     print("【最终回答】")
-    print(result["output"])
+    if "messages" in result and result["messages"]:
+        print(result["messages"][-1].content)
     print()
 
 
@@ -277,8 +276,8 @@ def main():
     print()
 
     part1_define_tools()
-    agent_executor = part2_create_and_run_agent()
-    part3_multi_tool_task(agent_executor)
+    agent = part2_create_and_run_agent()
+    part3_multi_tool_task(agent)
 
     print("=" * 60)
     print("Tools & Agents 演示完毕！")
@@ -287,8 +286,8 @@ def main():
     print("  • @tool 把普通函数转为 LangChain 可调用的工具")
     print("  • Tool 的 docstring 是 LLM 判断何时调用的依据，要写清楚")
     print("  • ReAct = 推理（Reason）+ 行动（Act），循环直至完成目标")
-    print("  • create_react_agent + AgentExecutor 是标准 ReAct 实现")
-    print("  • verbose=True 打印完整推理链路，方便调试和学习")
+    print("  • create_agent 是 LangChain 1.0+ 的新 API，无需 AgentExecutor")
+    print("  • 新版 Agent 使用 messages 格式输入，返回包含 messages 的字典")
     print("=" * 60)
 
 
