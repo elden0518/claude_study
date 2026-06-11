@@ -148,16 +148,18 @@ def demo_fallback_chain():
         max_tokens=128,
     )
     
-    # 备用模型（需要配置 DEEPSEEK_API_KEY）
+    # 备用模型(需要配置 DEEPSEEK_API_KEY)
     fallback_llm = None
-    if os.getenv("DEEPSEEK_API_KEY"):
+    deepseek_api_key = os.getenv("DEEPSEEK_API_KEY")
+    if deepseek_api_key:
         fallback_llm = ChatOpenAI(
             model="deepseek-v4-pro",
             max_tokens=128,
             base_url="https://api.deepseek.com/v1",  # DeepSeek API 地址
+            api_key=deepseek_api_key,  # 显式传入 API Key
         )
-        print("  主模型：Claude Sonnet")
-        print("  备用模型：DeepSeek V4 Pro")
+        print("  主模型: Claude Sonnet")
+        print("  备用模型: DeepSeek V4 Pro")
     else:
         print("  ⚠️  未配置 DEEPSEEK_API_KEY，跳过备用模型测试")
         print("  [提示] 在 .env 中添加 DEEPSEEK_API_KEY 以启用此功能")
