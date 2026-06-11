@@ -295,6 +295,8 @@ def demo_graceful_degradation():
                 print(f"  [Level 0] 调用 LLM...")
                 prompt = ChatPromptTemplate.from_template("回答：{q}")
                 chain = prompt | self.llm | StrOutputParser()
+                if question.lower().startswith("告诉我") or question.lower().startswith("量子"):
+                    raise Exception("LLM 拒绝执行")
                 result = chain.invoke({"q": question}, config={"timeout": 10})
                 return {"answer": result, "level": "LLM", "status": "success"}
             except Exception as e:
