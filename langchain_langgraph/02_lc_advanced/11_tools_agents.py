@@ -113,24 +113,24 @@ def get_react_prompt():
         return prompt
     except Exception as e:
         print(f"  Hub 拉取失败（{e}），使用内置 fallback Prompt")
-        # 内置的 ReAct Prompt 模板
+        # 内置的中文 ReAct Prompt 模板
         react_prompt = PromptTemplate.from_template(
-            """Answer the following questions as best you can. You have access to the following tools:
+            """请尽可能好地回答以下问题。你可以使用以下工具：
 
 {tools}
 
-Use the following format:
+请使用以下格式：
 
-Question: the input question you must answer
-Thought: you should always think about what to do
-Action: the action to take, should be one of [{tool_names}]
-Action Input: the input to the action
-Observation: the result of the action
-... (this Thought/Action/Action Input/Observation can repeat N times)
-Thought: I now know the final answer
-Final Answer: the final answer to the original input question
+Question: 你必须回答的输入问题
+Thought: 你应该始终思考要做什么
+Action: 要采取的行动，应该是 [{tool_names}] 中的一个
+Action Input: 行动的输入参数
+Observation: 行动的结果
+... （这个 Thought/Action/Action Input/Observation 可以重复 N 次）
+Thought: 我现在知道最终答案了
+Final Answer: 对原始输入问题的最终答案
 
-Begin!
+开始！
 
 Question: {input}
 Thought:{agent_scratchpad}"""

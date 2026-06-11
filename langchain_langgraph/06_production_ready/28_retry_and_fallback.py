@@ -130,7 +130,7 @@ def demo_fallback_chain():
     
     典型配置：
     主模型：Claude Sonnet（高质量，但可能限流）
-    备用 1：GPT-4 Turbo（中等质量）
+    备用 1：DeepSeek V4 Pro（高性价比）
     备用 2：本地小模型（低质量，但稳定）
     
     使用场景：
@@ -148,18 +148,19 @@ def demo_fallback_chain():
         max_tokens=128,
     )
     
-    # 备用模型（需要配置 OPENAI_API_KEY）
+    # 备用模型（需要配置 DEEPSEEK_API_KEY）
     fallback_llm = None
-    if os.getenv("OPENAI_API_KEY"):
+    if os.getenv("DEEPSEEK_API_KEY"):
         fallback_llm = ChatOpenAI(
-            model="gpt-4o-mini",
+            model="deepseek-v4-pro",
             max_tokens=128,
+            base_url="https://api.deepseek.com/v1",  # DeepSeek API 地址
         )
         print("  主模型：Claude Sonnet")
-        print("  备用模型：GPT-4o Mini")
+        print("  备用模型：DeepSeek V4 Pro")
     else:
-        print("  ⚠️  未配置 OPENAI_API_KEY，跳过备用模型测试")
-        print("  [提示] 在 .env 中添加 OPENAI_API_KEY 以启用此功能")
+        print("  ⚠️  未配置 DEEPSEEK_API_KEY，跳过备用模型测试")
+        print("  [提示] 在 .env 中添加 DEEPSEEK_API_KEY 以启用此功能")
         return
     
     # 构建带 fallback 的链

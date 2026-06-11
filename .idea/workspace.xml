@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c899a09e-bdd9-423b-bd37-72e6e96c8abd" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/claude_study.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/claude_study.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/langchain_langgraph/02_lc_advanced/11_tools_agents.py" beforeDir="false" afterPath="$PROJECT_DIR$/langchain_langgraph/02_lc_advanced/11_tools_agents.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/langchain_langgraph/04_lg_advanced/19_parallel_nodes.py" beforeDir="false" afterPath="$PROJECT_DIR$/langchain_langgraph/04_lg_advanced/19_parallel_nodes.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,12 +34,30 @@
     "Python.01_hello_claude.executor": "Run",
     "Python.02_messages_format.executor": "Run",
     "Python.03_parameters.executor": "Run",
+    "Python.11_tools_agents.executor": "Run",
+    "Python.12_callbacks.executor": "Run",
+    "Python.13_hello_langgraph.executor": "Run",
+    "Python.14_conditional_edges.executor": "Run",
+    "Python.15_cycles_loops.executor": "Run",
+    "Python.16_human_in_the_loop.executor": "Run",
+    "Python.17_persistence.executor": "Run",
+    "Python.18_subgraphs.executor": "Run",
+    "Python.19_parallel_nodes.executor": "Run",
+    "Python.20_tool_node.executor": "Run",
+    "Python.21_streaming.executor": "Run",
+    "Python.22_supervisor_pattern.executor": "Run",
+    "Python.23_network_pattern.executor": "Run",
+    "Python.24_research_team.executor": "Run",
+    "Python.25_code_review_team.executor": "Run",
+    "Python.26_production_patterns.executor": "Run",
+    "Python.27_caching_layer.executor": "Run",
+    "Python.28_retry_and_fallback.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "D:/claude_project/claude_study",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -46,8 +65,8 @@
       <recent name="D:\claude_project\claude_study" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.03_parameters">
-    <configuration name="01_hello_claude" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.28_retry_and_fallback">
+    <configuration name="24_research_team" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="claude_study" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -56,11 +75,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/01_basics" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/langchain_langgraph/05_multi_agent" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/01_basics/01_hello_claude.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/langchain_langgraph/05_multi_agent/24_research_team.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -69,7 +88,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="02_messages_format" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="25_code_review_team" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="claude_study" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -78,11 +97,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/01_basics" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/langchain_langgraph/05_multi_agent" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/01_basics/02_messages_format.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/langchain_langgraph/05_multi_agent/25_code_review_team.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -91,7 +110,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="03_parameters" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="26_production_patterns" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="claude_study" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -100,11 +119,55 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/01_basics" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/langchain_langgraph/05_multi_agent" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/01_basics/03_parameters.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/langchain_langgraph/05_multi_agent/26_production_patterns.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="27_caching_layer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="claude_study" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/langchain_langgraph/06_production_ready" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/langchain_langgraph/06_production_ready/27_caching_layer.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="28_retry_and_fallback" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="claude_study" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/langchain_langgraph/06_production_ready" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/langchain_langgraph/06_production_ready/28_retry_and_fallback.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -115,9 +178,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.03_parameters" />
-        <item itemvalue="Python.02_messages_format" />
-        <item itemvalue="Python.01_hello_claude" />
+        <item itemvalue="Python.28_retry_and_fallback" />
+        <item itemvalue="Python.27_caching_layer" />
+        <item itemvalue="Python.26_production_patterns" />
+        <item itemvalue="Python.25_code_review_team" />
+        <item itemvalue="Python.24_research_team" />
       </list>
     </recent_temporary>
   </component>

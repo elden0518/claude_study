@@ -1,0 +1,17 @@
+[      48ms] [LOG] 点击开始 @ https://www.szft.gov.cn/ftimages/translationToFJ.js:29
+[      48ms] [LOG] 点击开始 @ https://www.szft.gov.cn/ftimages/translationToFJ.js:29
+[      85ms] [LOG] {pub_point: bmxx/qgaj, url: http://www.szft.gov.cn/bmxx/qgaj/index.html, name: 区公安分局, id: 7871, nameHeaderString: <span>福田区公安分局</span>} @ https://www.szft.gov.cn/bmxx/qgaj/ztfw/zjbl/jzzbl/mdml/index.html:107
+[     108ms] [LOG] [Object, Object] @ https://www.szft.gov.cn/bmxx/qgaj/ztfw/zjbl/jzzbl/mdml/index.html:341
+[     167ms] [LOG] no valid method for getting user was provided. @ https://ta.trs.cn/c/js/ta.js?mpid=4249:0
+[     168ms] [LOG] set UVCookie topLevelDomain: szft.gov.cn, _trs_uv=mq7hzjyu_4249_4x2u @ https://ta.trs.cn/c/js/ta.js?mpid=4249:0
+[     168ms] [LOG] set sessionCookie: _trs_ua_s_1=mq7hzjyu_4249_blqv @ https://ta.trs.cn/c/js/ta.js?mpid=4249:0
+[     234ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ https://www.szft.gov.cn/bmxx/qgaj/ztfw/zjbl/jzzbl/mdml/index.html:0
+[     379ms] [ERROR] Mixed Content: The page at 'https://www.szft.gov.cn/bmxx/qgaj/ztfw/zjbl/jzzbl/mdml/content/post_12737289.html' was loaded over HTTPS, but requested an insecure stylesheet 'http://www.gz.gov.cn/global/audiojs.css'. This request has been blocked; the content must be served over HTTPS. @ https://www.szft.gov.cn/bmxx/qgaj/ztfw/zjbl/jzzbl/mdml/content/post_12737289.html:48
+[     379ms] [ERROR] Mixed Content: The page at 'https://www.szft.gov.cn/bmxx/qgaj/ztfw/zjbl/jzzbl/mdml/content/post_12737289.html' was loaded over HTTPS, but requested an insecure script 'http://www.gz.gov.cn/global/audio.min.js'. This request has been blocked; the content must be served over HTTPS. @ https://www.szft.gov.cn/bmxx/qgaj/ztfw/zjbl/jzzbl/mdml/content/post_12737289.html:0
+[     383ms] [LOG] 点击开始 @ https://www.szft.gov.cn/ftimages/translationToFJ.js:29
+[     383ms] [LOG] 点击开始 @ https://www.szft.gov.cn/ftimages/translationToFJ.js:29
+[     438ms] [LOG] {pub_point: bmxx/qgaj, url: http://www.szft.gov.cn/bmxx/qgaj/index.html, name: 区公安分局, id: 7871, nameHeaderString: <span>福田区公安分局</span>} @ https://www.szft.gov.cn/bmxx/qgaj/ztfw/zjbl/jzzbl/mdml/content/post_12737289.html:117
+[     443ms] [LOG] no valid method for getting user was provided. @ https://ta.trs.cn/c/js/ta.js?mpid=4249:0
+[     443ms] [LOG] set UVCookie topLevelDomain: szft.gov.cn, _trs_uv=mq7hzjyu_4249_4x2u @ https://ta.trs.cn/c/js/ta.js?mpid=4249:0
+[     444ms] [LOG] set sessionCookie: _trs_ua_s_1=mq7hzjyu_4249_blqv @ https://ta.trs.cn/c/js/ta.js?mpid=4249:0
+[     590ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ https://www.szft.gov.cn/bmxx/qgaj/ztfw/zjbl/jzzbl/mdml/content/post_12737289.html:0

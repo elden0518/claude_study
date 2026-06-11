@@ -1,0 +1,9 @@
+[    1230ms] [LOG] perfTrackInit anonymous production @ https://cas.mioffice.cn/mcfe-cas-fe/static/static/js/1.8ff5e23d.chunk.js:0
+[    2514ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://cas.mioffice.cn/images/favicon_new.ico:0
+[   15344ms] [LOG] performance result {result: Object} @ https://cas.mioffice.cn/mcfe-cas-fe/static/static/js/1.8ff5e23d.chunk.js:0
+[   35518ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ https://cas.mioffice.cn/login?service=https%3A%2F%2Fp.dun.mioffice.cn%2Fcas%2Fsts%3Ffollowup%3Dhttps%253A%252F%252Fdata.mioffice.cn%252Fwhale%252F%253Fpid%253D10070073%26sign%3DOGRjODJkZjkwMTAzMDY2YTllNTVhMjRiZTY4MzA1NTY%3D#/data-bi/dashboard/109884?GFLT=~(15722835~(69816~(~5000~null)~553502~(~'*5bP12U*5d2602EPTC0G)~717941~2)~15722839~(869542~(~'*5bP12U*5d2602EPTC0R~'*5bP12U*5d2602EPTC0G)~904297~2)~15722843~(255020~(~'*5bP12U*5d2602EPTC0G)~939295~2))&theme=coldTheme&projectId=10070073:0
+[   44005ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://cas.mioffice.cn/v2/api/login:0
+[   51103ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://cas.mioffice.cn/v2/api/login:0
+[   59035ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://cas.mioffice.cn/v2/api/login:0
+[   60844ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://cas.mioffice.cn/v2/api/login:0
+[   67218ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://cas.mioffice.cn/v2/api/login:0

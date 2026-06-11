@@ -1,0 +1,4 @@
+[     141ms] [LOG] 点击开始 @ https://www.szft.gov.cn/ftimages/translationToFJ.js:29
+[     141ms] [LOG] 点击开始 @ https://www.szft.gov.cn/ftimages/translationToFJ.js:29
+[     407ms] [LOG] {pub_point: bmxx/qgaj, url: http://www.szft.gov.cn/bmxx/qgaj/index.html, name: 区公安分局, id: 7871, nameHeaderString: <span>福田区公安分局</span>} @ https://www.szft.gov.cn/bmxx/qgaj/ztfw/zjbl/jzzbl/index.html:110
+[     569ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ https://www.szft.gov.cn/bmxx/qgaj/ztfw/zjbl/jzzbl/index.html:0

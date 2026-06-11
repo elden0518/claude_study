@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(commit-commands:commit-push-pr)",
+      "Bash(gh repo:*)",
+      "Bash(gh pr:*)",
+      "mcp__plugin_context7_context7__resolve-library-id",
+      "mcp__plugin_context7_context7__query-docs",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(.venv/Scripts/pip show:*)",
+      "Bash(.venv/Scripts/python -c \"import langchain; print\\(langchain.__version__\\); from langchain.chains import create_retrieval_chain; print\\('OK'\\)\")",
+      "Bash(.venv/Scripts/python -c \"import langchain; import pkgutil; mods = [m.name for m in pkgutil.iter_modules\\(langchain.__path__\\)]; print\\(mods\\)\")",
+      "Bash(.venv/Scripts/python -c ':*)",
+      "Bash(.venv/Scripts/python -c \"import langchain_community; import pkgutil; print\\([m.name for m in pkgutil.iter_modules\\(langchain_community.__path__\\)][:20]\\)\")"
+    ]
+  }
+}

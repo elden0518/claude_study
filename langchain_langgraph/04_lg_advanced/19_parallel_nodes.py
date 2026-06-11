@@ -133,8 +133,7 @@ def fan_out(state: ParallelState):
     """
     print(f"  [fan_out] 为 {len(state['topics'])} 个主题创建并行任务")
     return [
-        Send("process_topic", {"topic": t, "results": []})
-        for t in state["topics"]
+        Send("process_topic", {"topic": t, "results": []}) for t in state["topics"]
     ]
 
 
