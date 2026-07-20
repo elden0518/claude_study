@@ -39,7 +39,7 @@ from langchain_core.caches import InMemoryCache
 # LangChain 1.x 使用 set_global_handler 或直接配置
 # 对于缓存，推荐使用 with_config 或在 chain 级别配置
 
-MODEL = "ppio/pa/claude-sonnet-4-6"
+MODEL = "xiaomi/mimo-v2.5-pro"
 
 
 # =============================================================================

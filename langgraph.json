@@ -1,0 +1,9 @@
+{
+  "dependencies": ["."],
+  "graphs": {
+    "code_review_team": "langchain_langgraph/05_multi_agent/25_code_review_team.py:app",
+    "simple_agent": "langchain_langgraph/03_lg_basics/13_hello_langgraph.py:app"
+  },
+  "env": ".env",
+  "cors_origins": ["https://smith.langchain.com"]
+}

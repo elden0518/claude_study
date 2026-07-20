@@ -148,7 +148,7 @@ def part1_stdout_callback():
     print("=" * 60)
 
     llm = ChatAnthropic(
-        model="ppio/pa/claude-sonnet-4-6",
+        model="xiaomi/mimo-v2.5-pro",
         max_tokens=100,
     )
 

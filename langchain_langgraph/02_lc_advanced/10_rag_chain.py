@@ -147,7 +147,7 @@ def part2_query_with_rag(retriever):
     print("=" * 60)
 
     llm = ChatAnthropic(
-        model="ppio/pa/claude-sonnet-4-6",
+        model="xiaomi/mimo-v2.5-pro",
         max_tokens=512,
     )
 

@@ -32,7 +32,7 @@ load_dotenv()
 from langchain_anthropic import ChatAnthropic
 from langchain_core.messages import HumanMessage, SystemMessage
 
-MODEL = "ppio/pa/claude-sonnet-4-6"
+MODEL = "xiaomi/mimo-v2.5-pro"
 
 
 # =============================================================================

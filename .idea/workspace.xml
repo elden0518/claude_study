@@ -5,14 +5,56 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c899a09e-bdd9-423b-bd37-72e6e96c8abd" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/07_jupyter_learning/agent_bot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07_jupyter_learning/agent_bot2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07_jupyter_learning/agent_bot3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07_jupyter_learning/agent_bot4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07_jupyter_learning/demoLearning.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/07_jupyter_learning/test.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/langgraph.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/langchain_langgraph/02_lc_advanced/11_tools_agents.py" beforeDir="false" afterPath="$PROJECT_DIR$/langchain_langgraph/02_lc_advanced/11_tools_agents.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/langchain_langgraph/01_lc_basics/01_hello_langchain.py" beforeDir="false" afterPath="$PROJECT_DIR$/langchain_langgraph/01_lc_basics/01_hello_langchain.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/langchain_langgraph/01_lc_basics/02_prompt_templates.py" beforeDir="false" afterPath="$PROJECT_DIR$/langchain_langgraph/01_lc_basics/02_prompt_templates.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/langchain_langgraph/01_lc_basics/03_lcel_chains.py" beforeDir="false" afterPath="$PROJECT_DIR$/langchain_langgraph/01_lc_basics/03_lcel_chains.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/langchain_langgraph/01_lc_basics/04_output_parsers.py" beforeDir="false" afterPath="$PROJECT_DIR$/langchain_langgraph/01_lc_basics/04_output_parsers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/langchain_langgraph/01_lc_basics/05_memory.py" beforeDir="false" afterPath="$PROJECT_DIR$/langchain_langgraph/01_lc_basics/05_memory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/langchain_langgraph/01_lc_basics/06_multi_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/langchain_langgraph/01_lc_basics/06_multi_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/langchain_langgraph/02_lc_advanced/09_embeddings_vectorstore.py" beforeDir="false" afterPath="$PROJECT_DIR$/langchain_langgraph/02_lc_advanced/09_embeddings_vectorstore.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/langchain_langgraph/02_lc_advanced/10_rag_chain.py" beforeDir="false" afterPath="$PROJECT_DIR$/langchain_langgraph/02_lc_advanced/10_rag_chain.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/langchain_langgraph/02_lc_advanced/12_callbacks.py" beforeDir="false" afterPath="$PROJECT_DIR$/langchain_langgraph/02_lc_advanced/12_callbacks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/langchain_langgraph/03_lg_basics/13_hello_langgraph.py" beforeDir="false" afterPath="$PROJECT_DIR$/langchain_langgraph/03_lg_basics/13_hello_langgraph.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/langchain_langgraph/03_lg_basics/14_conditional_edges.py" beforeDir="false" afterPath="$PROJECT_DIR$/langchain_langgraph/03_lg_basics/14_conditional_edges.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/langchain_langgraph/03_lg_basics/15_cycles_loops.py" beforeDir="false" afterPath="$PROJECT_DIR$/langchain_langgraph/03_lg_basics/15_cycles_loops.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/langchain_langgraph/03_lg_basics/16_human_in_the_loop.py" beforeDir="false" afterPath="$PROJECT_DIR$/langchain_langgraph/03_lg_basics/16_human_in_the_loop.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/langchain_langgraph/03_lg_basics/17_persistence.py" beforeDir="false" afterPath="$PROJECT_DIR$/langchain_langgraph/03_lg_basics/17_persistence.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/langchain_langgraph/04_lg_advanced/18_5_subgraph_mapping.py" beforeDir="false" afterPath="$PROJECT_DIR$/langchain_langgraph/04_lg_advanced/18_5_subgraph_mapping.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/langchain_langgraph/04_lg_advanced/18_subgraphs.py" beforeDir="false" afterPath="$PROJECT_DIR$/langchain_langgraph/04_lg_advanced/18_subgraphs.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/langchain_langgraph/04_lg_advanced/19_parallel_nodes.py" beforeDir="false" afterPath="$PROJECT_DIR$/langchain_langgraph/04_lg_advanced/19_parallel_nodes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/langchain_langgraph/04_lg_advanced/20_tool_node.py" beforeDir="false" afterPath="$PROJECT_DIR$/langchain_langgraph/04_lg_advanced/20_tool_node.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/langchain_langgraph/04_lg_advanced/21_streaming.py" beforeDir="false" afterPath="$PROJECT_DIR$/langchain_langgraph/04_lg_advanced/21_streaming.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/langchain_langgraph/04_lg_advanced/22_supervisor_pattern.py" beforeDir="false" afterPath="$PROJECT_DIR$/langchain_langgraph/04_lg_advanced/22_supervisor_pattern.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/langchain_langgraph/04_lg_advanced/23_network_pattern.py" beforeDir="false" afterPath="$PROJECT_DIR$/langchain_langgraph/04_lg_advanced/23_network_pattern.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/langchain_langgraph/05_multi_agent/24_research_team.py" beforeDir="false" afterPath="$PROJECT_DIR$/langchain_langgraph/05_multi_agent/24_research_team.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/langchain_langgraph/05_multi_agent/25_code_review_team.py" beforeDir="false" afterPath="$PROJECT_DIR$/langchain_langgraph/05_multi_agent/25_code_review_team.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/langchain_langgraph/05_multi_agent/26_production_patterns.py" beforeDir="false" afterPath="$PROJECT_DIR$/langchain_langgraph/05_multi_agent/26_production_patterns.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/langchain_langgraph/06_production_ready/27_caching_layer.py" beforeDir="false" afterPath="$PROJECT_DIR$/langchain_langgraph/06_production_ready/27_caching_layer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/langchain_langgraph/06_production_ready/28_retry_and_fallback.py" beforeDir="false" afterPath="$PROJECT_DIR$/langchain_langgraph/06_production_ready/28_retry_and_fallback.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/langchain_langgraph/06_production_ready/29_debugging_and_visualization.py" beforeDir="false" afterPath="$PROJECT_DIR$/langchain_langgraph/06_production_ready/29_debugging_and_visualization.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/langchain_langgraph/07_advanced_rag/30_advanced_rag_techniques.py" beforeDir="false" afterPath="$PROJECT_DIR$/langchain_langgraph/07_advanced_rag/30_advanced_rag_techniques.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/langchain_langgraph/08_advanced_agents/31_advanced_agent_patterns.py" beforeDir="false" afterPath="$PROJECT_DIR$/langchain_langgraph/08_advanced_agents/31_advanced_agent_patterns.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jupyter Notebook" />
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -28,45 +70,60 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.01_hello_claude.executor": "Run",
-    "Python.02_messages_format.executor": "Run",
-    "Python.03_parameters.executor": "Run",
-    "Python.11_tools_agents.executor": "Run",
-    "Python.12_callbacks.executor": "Run",
-    "Python.13_hello_langgraph.executor": "Run",
-    "Python.14_conditional_edges.executor": "Run",
-    "Python.15_cycles_loops.executor": "Run",
-    "Python.16_human_in_the_loop.executor": "Run",
-    "Python.17_persistence.executor": "Run",
-    "Python.18_subgraphs.executor": "Run",
-    "Python.19_parallel_nodes.executor": "Run",
-    "Python.20_tool_node.executor": "Run",
-    "Python.21_streaming.executor": "Run",
-    "Python.22_supervisor_pattern.executor": "Run",
-    "Python.23_network_pattern.executor": "Run",
-    "Python.24_research_team.executor": "Run",
-    "Python.25_code_review_team.executor": "Run",
-    "Python.26_production_patterns.executor": "Run",
-    "Python.27_caching_layer.executor": "Run",
-    "Python.28_retry_and_fallback.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/claude_project/claude_study",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.01_hello_claude.executor&quot;: &quot;Run&quot;,
+    &quot;Python.01_hello_langchain.executor&quot;: &quot;Run&quot;,
+    &quot;Python.02_messages_format.executor&quot;: &quot;Run&quot;,
+    &quot;Python.02_prompt_templates.executor&quot;: &quot;Run&quot;,
+    &quot;Python.03_lcel_chains.executor&quot;: &quot;Run&quot;,
+    &quot;Python.03_parameters.executor&quot;: &quot;Run&quot;,
+    &quot;Python.04_output_parsers.executor&quot;: &quot;Run&quot;,
+    &quot;Python.05_memory.executor&quot;: &quot;Run&quot;,
+    &quot;Python.11_tools_agents.executor&quot;: &quot;Run&quot;,
+    &quot;Python.12_callbacks.executor&quot;: &quot;Run&quot;,
+    &quot;Python.13_hello_langgraph.executor&quot;: &quot;Run&quot;,
+    &quot;Python.14_conditional_edges.executor&quot;: &quot;Run&quot;,
+    &quot;Python.15_cycles_loops.executor&quot;: &quot;Run&quot;,
+    &quot;Python.16_human_in_the_loop.executor&quot;: &quot;Run&quot;,
+    &quot;Python.17_persistence.executor&quot;: &quot;Run&quot;,
+    &quot;Python.18_subgraphs.executor&quot;: &quot;Run&quot;,
+    &quot;Python.19_parallel_nodes.executor&quot;: &quot;Run&quot;,
+    &quot;Python.20_tool_node.executor&quot;: &quot;Run&quot;,
+    &quot;Python.21_streaming.executor&quot;: &quot;Run&quot;,
+    &quot;Python.22_supervisor_pattern.executor&quot;: &quot;Run&quot;,
+    &quot;Python.23_network_pattern.executor&quot;: &quot;Run&quot;,
+    &quot;Python.24_research_team.executor&quot;: &quot;Run&quot;,
+    &quot;Python.25_code_review_team.executor&quot;: &quot;Run&quot;,
+    &quot;Python.26_production_patterns.executor&quot;: &quot;Run&quot;,
+    &quot;Python.27_caching_layer.executor&quot;: &quot;Run&quot;,
+    &quot;Python.28_retry_and_fallback.executor&quot;: &quot;Run&quot;,
+    &quot;Python.29_debugging_and_visualization.executor&quot;: &quot;Run&quot;,
+    &quot;Python.30_advanced_rag_techniques.executor&quot;: &quot;Run&quot;,
+    &quot;Python.31_advanced_agent_patterns.executor&quot;: &quot;Run&quot;,
+    &quot;Python.32_deployment_and_monitoring.executor&quot;: &quot;Run&quot;,
+    &quot;Python.33_evaluation_and_testing.executor&quot;: &quot;Run&quot;,
+    &quot;Python.34_project_customer_service_bot.executor&quot;: &quot;Run&quot;,
+    &quot;Python.agent_bot.executor&quot;: &quot;Run&quot;,
+    &quot;Python.agent_bot2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.agent_bot3.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/claude_project/claude_study/07_jupyter_learning&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\claude_project\claude_study\07_jupyter_learning" />
       <recent name="D:\claude_project\claude_study" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.28_retry_and_fallback">
-    <configuration name="24_research_team" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.05_memory">
+    <configuration name="01_hello_langchain" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="claude_study" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -75,11 +132,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/langchain_langgraph/05_multi_agent" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/langchain_langgraph/01_lc_basics" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/langchain_langgraph/05_multi_agent/24_research_team.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/langchain_langgraph/01_lc_basics/01_hello_langchain.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -88,7 +145,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="25_code_review_team" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="02_prompt_templates" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="claude_study" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -97,11 +154,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/langchain_langgraph/05_multi_agent" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/langchain_langgraph/01_lc_basics" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/langchain_langgraph/05_multi_agent/25_code_review_team.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/langchain_langgraph/01_lc_basics/02_prompt_templates.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -110,7 +167,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="26_production_patterns" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="03_lcel_chains" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="claude_study" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -119,11 +176,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/langchain_langgraph/05_multi_agent" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/langchain_langgraph/01_lc_basics" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/langchain_langgraph/05_multi_agent/26_production_patterns.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/langchain_langgraph/01_lc_basics/03_lcel_chains.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -132,7 +189,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="27_caching_layer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="04_output_parsers" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="claude_study" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -141,11 +198,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/langchain_langgraph/06_production_ready" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/langchain_langgraph/01_lc_basics" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/langchain_langgraph/06_production_ready/27_caching_layer.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/langchain_langgraph/01_lc_basics/04_output_parsers.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -154,7 +211,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="28_retry_and_fallback" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="05_memory" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="claude_study" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -163,11 +220,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/langchain_langgraph/06_production_ready" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/langchain_langgraph/01_lc_basics" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/langchain_langgraph/06_production_ready/28_retry_and_fallback.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/langchain_langgraph/01_lc_basics/05_memory.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -178,11 +235,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.28_retry_and_fallback" />
-        <item itemvalue="Python.27_caching_layer" />
-        <item itemvalue="Python.26_production_patterns" />
-        <item itemvalue="Python.25_code_review_team" />
-        <item itemvalue="Python.24_research_team" />
+        <item itemvalue="Python.05_memory" />
+        <item itemvalue="Python.04_output_parsers" />
+        <item itemvalue="Python.03_lcel_chains" />
+        <item itemvalue="Python.02_prompt_templates" />
+        <item itemvalue="Python.01_hello_langchain" />
       </list>
     </recent_temporary>
   </component>
@@ -202,5 +259,16 @@
       <updated>1775095761062</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

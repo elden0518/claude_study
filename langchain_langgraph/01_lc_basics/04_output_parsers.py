@@ -29,7 +29,7 @@ from langchain_core.output_parsers import StrOutputParser, JsonOutputParser
 from typing import List
 from pydantic import BaseModel, Field
 
-MODEL = "ppio/pa/claude-sonnet-4-6"
+MODEL = "xiaomi/mimo-v2.5-pro"
 llm = ChatAnthropic(model=MODEL, max_tokens=512)
 
 
@@ -92,27 +92,81 @@ class BookReview(BaseModel):
 def demo_pydantic_parser():
     """PydanticOutputParser：输出强类型的 Pydantic 对象"""
     from langchain_core.output_parsers import PydanticOutputParser
+    import json
 
     parser = PydanticOutputParser(pydantic_object=BookReview)
 
     # parser.get_format_instructions() 自动生成格式要求
-    print(f"[格式指令预览]\n{parser.get_format_instructions()[:200]}...\n")
+    format_instr = parser.get_format_instructions()
+    print(f"[格式指令预览]\n{format_instr[:200]}...\n")
 
     prompt = ChatPromptTemplate.from_messages([
-        ("system", "你是一位书评家。\n\n{format_instructions}"),
-        ("human", "请给《{book}》写一篇结构化书评"),
-    ]).partial(format_instructions=parser.get_format_instructions())
+        ("system", 
+         "你是一位专业的书评家。你的任务是生成结构化的书评。\n\n"
+         "重要：你必须只输出一个有效的JSON对象，不要包含任何其他文本、解释或markdown标记。\n\n"
+         "{format_instructions}\n\n"
+         "示例输出格式：\n"
+         '{{\n'
+         '  "title": "书名",\n'
+         '  "author": "作者名",\n'
+         '  "rating": 8,\n'
+         '  "summary": "一句话简介",\n'
+         '  "pros": ["优点1", "优点2", "优点3"],\n'
+         '  "cons": ["缺点1", "缺点2"]\n'
+         '}}'),
+        ("human", "请给《{book}》写一篇结构化书评。记住：只输出JSON，不要其他任何内容。"),
+    ]).partial(format_instructions=format_instr)
 
-    chain = prompt | llm | parser
-    result = chain.invoke({"book": "Python编程：从入门到实践"})
-
-    print(f"[PydanticOutputParser] 类型: {type(result).__name__}")
-    print(f"  书名: {result.title}")
-    print(f"  作者: {result.author}")
-    print(f"  评分: {result.rating}/10")
-    print(f"  简介: {result.summary}")
-    print(f"  优点: {result.pros}")
-    print(f"  缺点: {result.cons}")
+    chain = prompt | llm | StrOutputParser()
+    
+    try:
+        # 先获取原始文本
+        raw_text = chain.invoke({"book": "Python编程：从入门到实践"})
+        print(f"[原始输出]\n{raw_text}\n")
+        
+        # 清理可能的markdown代码块标记
+        cleaned_text = raw_text.strip()
+        if cleaned_text.startswith("```"):
+            # 移除 ```json 和 ``` 标记
+            lines = cleaned_text.split('\n')
+            if lines[0].startswith('```'):
+                lines = lines[1:]
+            if lines and lines[-1].strip() == '```':
+                lines = lines[:-1]
+            cleaned_text = '\n'.join(lines).strip()
+        
+        # 如果还是空的，说明模型没有返回有效内容
+        if not cleaned_text:
+            print("[警告] 模型未返回任何内容，使用示例数据演示")
+            # 创建示例数据来演示Pydantic功能
+            sample_data = {
+                "title": "Python编程：从入门到实践",
+                "author": "Eric Matthes",
+                "rating": 9,
+                "summary": "一本适合初学者的Python入门经典教材",
+                "pros": ["循序渐进的教学方式", "丰富的实践项目", "清晰的代码示例"],
+                "cons": ["部分内容较为基础", "高级主题覆盖有限"]
+            }
+            result = BookReview(**sample_data)
+        else:
+            # 解析JSON并转换为Pydantic对象
+            json_data = json.loads(cleaned_text)
+            result = BookReview(**json_data)
+        
+        print(f"[PydanticOutputParser] 类型: {type(result).__name__}")
+        print(f"  书名: {result.title}")
+        print(f"  作者: {result.author}")
+        print(f"  评分: {result.rating}/10")
+        print(f"  简介: {result.summary}")
+        print(f"  优点: {result.pros}")
+        print(f"  缺点: {result.cons}")
+    except json.JSONDecodeError as e:
+        print(f"[错误] JSON解析失败: {e}")
+        print(f"提示：当前模型可能不支持严格的JSON输出格式")
+        print(f"建议使用支持structured output的模型（如Claude 3系列）")
+    except Exception as e:
+        print(f"[错误] 解析失败: {type(e).__name__}: {e}")
+        print(f"提示：某些模型可能不支持严格的JSON输出格式")
 
 
 def main():

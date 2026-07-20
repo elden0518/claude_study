@@ -39,7 +39,7 @@ from langgraph.prebuilt import ToolNode, tools_condition, create_react_agent
 load_dotenv()
 
 # 初始化 LLM
-llm = ChatAnthropic(model="ppio/pa/claude-sonnet-4-6")
+llm = ChatAnthropic(model="xiaomi/mimo-v2.5-pro")
 
 print("=" * 60)
 print("LangGraph 20：ToolNode —— 原生工具调用节点")

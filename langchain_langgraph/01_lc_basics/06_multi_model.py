@@ -30,7 +30,7 @@ from langchain_anthropic import ChatAnthropic
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 
-ANTHROPIC_MODEL = "ppio/pa/claude-sonnet-4-6"
+ANTHROPIC_MODEL = "xiaomi/mimo-v2.5-pro"
 
 
 # =============================================================================

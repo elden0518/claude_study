@@ -40,7 +40,7 @@ from langgraph.types import Command
 load_dotenv()
 
 # 初始化 LLM
-llm = ChatAnthropic(model="ppio/pa/claude-sonnet-4-6")
+llm = ChatAnthropic(model="xiaomi/mimo-v2.5-pro")
 
 print("=" * 60)
 print("LangGraph 23：Network Pattern —— 去中心化多 Agent 协作")

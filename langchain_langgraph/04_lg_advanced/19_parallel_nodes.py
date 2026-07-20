@@ -37,7 +37,7 @@ from langgraph.types import Send
 load_dotenv()
 
 # 初始化 LLM
-llm = ChatAnthropic(model="ppio/pa/claude-sonnet-4-6")
+llm = ChatAnthropic(model="xiaomi/mimo-v2.5-pro")
 
 print("=" * 60)
 print("LangGraph 19：Parallel Nodes —— 并行节点执行")

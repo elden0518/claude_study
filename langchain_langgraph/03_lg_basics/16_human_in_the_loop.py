@@ -36,7 +36,7 @@ from langgraph.types import interrupt, Command
 from langgraph.checkpoint.memory import MemorySaver
 from langchain_anthropic import ChatAnthropic
 
-MODEL = "ppio/pa/claude-sonnet-4-6"
+MODEL = "xiaomi/mimo-v2.5-pro"
 llm = ChatAnthropic(model=MODEL, max_tokens=256)
 
 

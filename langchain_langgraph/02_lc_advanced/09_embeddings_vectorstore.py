@@ -192,7 +192,7 @@ def part3_retriever_chain(vectorstore):
 
     # 初始化 LLM
     llm = ChatAnthropic(
-        model="ppio/pa/claude-sonnet-4-6",
+        model="xiaomi/mimo-v2.5-pro",
         max_tokens=256,
     )
 

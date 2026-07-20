@@ -36,7 +36,7 @@ from langgraph.graph.message import add_messages
 from langchain_anthropic import ChatAnthropic
 from langchain_core.messages import HumanMessage, AIMessage
 
-MODEL = "ppio/pa/claude-sonnet-4-6"
+MODEL = "xiaomi/mimo-v2.5-pro"
 llm = ChatAnthropic(model=MODEL, max_tokens=128)
 
 
@@ -209,13 +209,15 @@ def demo_state_snapshots():
     snapshot = app.get_state(config)
     print(f"  当前值：{snapshot.values}")
     print(f"  下一节点：{snapshot.next}")
-    print(f"  检查点 ID：{snapshot.checkpoint_id}")
-    
+    checkpoint_id = snapshot.config["configurable"].get("checkpoint_id", "N/A")
+    print(f"  检查点 ID：{checkpoint_id}")
+
     # 查看所有检查点历史
     print("\n【检查点历史】")
     checkpoints = list(app.get_state_history(config))
     for i, cp in enumerate(checkpoints):
-        print(f"  [{i}] checkpoint_id={cp.checkpoint_id[:8]}... | values={cp.values}")
+        cp_id = cp.config["configurable"].get("checkpoint_id", "N/A")
+        print(f"  [{i}] checkpoint_id={cp_id[:8]}... | values={cp.values}")
     
     # 从历史状态恢复（可选）
     if len(checkpoints) > 1:

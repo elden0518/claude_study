@@ -34,7 +34,7 @@ from langchain_core.messages import HumanMessage, AIMessage
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 
-MODEL = "ppio/pa/claude-sonnet-4-6"
+MODEL = "xiaomi/mimo-v2.5-pro"
 llm = ChatAnthropic(model=MODEL, max_tokens=512)
 
 
@@ -258,20 +258,24 @@ def demo_self_reflection():
         """生成答案草稿"""
         print(f"\n  [Generator] 第 {state['iteration'] + 1} 轮生成")
         
-        gen_prompt = ChatPromptTemplate.from_template(
-            """回答问题：
+        gen_prompt = ChatPromptTemplate.from_messages([
+            ("system", "你是一位专业的知识回答助手。请根据问题和之前的批评意见，生成高质量的答案。"),
+            ("human", """回答问题：{question}
 
-问题：{question}
+{critique_section}
 
-{'之前版本的批评：' + state['critique'] if state.get('critique') else ''}
-
-请生成一个高质量的答案："""
-        )
+请生成一个高质量的答案：""")
+        ])
+        
+        # 准备批评部分
+        critique_section = ""
+        if state.get("critique"):
+            critique_section = f"之前版本的批评：\n{state['critique']}\n\n请根据以上批评进行改进。"
         
         chain = gen_prompt | llm | StrOutputParser()
         draft = chain.invoke({
             "question": state["question"],
-            "critique": state.get("critique", "")
+            "critique_section": critique_section
         })
         
         print(f"  [Generator] 草稿长度：{len(draft)} 字符")
@@ -613,7 +617,7 @@ def main():
     print("=" * 60)
     
     demo_plan_and_execute()
-    demo_self_reflection()
+    #demo_self_reflection()
     demo_rewoo()
     demo_pattern_selection_guide()
     

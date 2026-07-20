@@ -31,7 +31,7 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.chat_history import InMemoryChatMessageHistory
 from langchain_core.runnables.history import RunnableWithMessageHistory
 
-MODEL = "ppio/pa/claude-sonnet-4-6"
+MODEL = "xiaomi/mimo-v2.5-pro"
 llm = ChatAnthropic(model=MODEL, max_tokens=256)
 
 
@@ -60,7 +60,7 @@ def demo_manual_history():
     print(f"  User: 我的名字是什么？")
     print(f"  AI: {r2}")
 
-    print(f"  历史消息数: {len(history)}")
+    print(f"  历史消息数: {history}")
 
 
 # =============================================================================

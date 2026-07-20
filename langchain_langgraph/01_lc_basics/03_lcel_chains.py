@@ -31,7 +31,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnableParallel, RunnablePassthrough, RunnableLambda
 
-MODEL = "ppio/pa/claude-sonnet-4-6"
+MODEL = "xiaomi/mimo-v2.5-pro"
 llm = ChatAnthropic(model=MODEL, max_tokens=256)
 
 
@@ -71,16 +71,23 @@ def demo_parallel():
         | llm | StrOutputParser()
     )
 
+    cst_chain = (
+        ChatPromptTemplate.from_template("列举{topic}的3个使用场景，每条一句话")
+        | llm | StrOutputParser()
+    )
+
     # RunnableParallel 同时调用两个链
     parallel = RunnableParallel(
         pros=pros_chain,
         cons=cons_chain,
+        cst=cst_chain,
     )
 
     result = parallel.invoke({"topic": "Python"})
     print(f"[并行链] Python 分析:")
     print(f"\n优点:\n{result['pros']}")
     print(f"\n缺点:\n{result['cons']}")
+    print(f"\n使用场景:\n{result['cst']}")
 
 
 # =============================================================================

@@ -41,7 +41,7 @@ from langgraph.graph.message import add_messages
 from langchain_anthropic import ChatAnthropic
 from langchain_core.messages import HumanMessage, AIMessage
 
-MODEL = "ppio/pa/claude-sonnet-4-6"
+MODEL = "xiaomi/mimo-v2.5-pro"
 llm = ChatAnthropic(model=MODEL, max_tokens=768)
 
 FINISH = "FINISH"
@@ -165,6 +165,10 @@ def build_code_review_team():
     graph.add_edge("reviewer", "supervisor")
 
     return graph.compile()
+
+
+# 导出供 LangGraph Studio/Cloud 使用
+app = build_code_review_team()
 
 
 def main():

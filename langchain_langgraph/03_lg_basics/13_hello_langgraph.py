@@ -181,6 +181,17 @@ def demo_message_graph():
         print(f"  {role}: {msg.content[:80]}")
 
 
+# 导出供 LangGraph Studio/Cloud 使用（使用最简单的图）
+def build_simple_app():
+    graph = StateGraph(SimpleState)
+    graph.add_node("process", process_node)
+    graph.add_edge(START, "process")
+    graph.add_edge("process", END)
+    return graph.compile()
+
+app = build_simple_app()
+
+
 def main():
     print("=" * 60)
     print("Part 1：最简单的图（单节点）")
